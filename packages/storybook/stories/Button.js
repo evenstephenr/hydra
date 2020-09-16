@@ -1,5 +1,11 @@
-import React from 'react';
+import React, {
+  useEffect,
+} from 'react';
 import PropTypes from 'prop-types';
+import {
+  Button as ComponentButton,
+  sayHello,
+} from 'components';
 import './button.css';
 
 /**
@@ -7,15 +13,20 @@ import './button.css';
  */
 export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+
+  useEffect(() => {
+    sayHello('hello!')
+  }, [])
+
   return (
-    <button
+    <ComponentButton
       type="button"
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
       style={backgroundColor && { backgroundColor }}
       {...props}
     >
       {label}
-    </button>
+    </ComponentButton>
   );
 };
 
@@ -46,5 +57,5 @@ Button.defaultProps = {
   backgroundColor: null,
   primary: false,
   size: 'medium',
-  onClick: undefined,
+  onClick: () => alert('hello again!'),
 };
