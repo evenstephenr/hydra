@@ -1,12 +1,18 @@
 # Hydra
 
-A playground for lerna and sandbox for learning how to responsibly use a [majestic monolith](https://m.signalvnoise.com/the-majestic-monolith/)
+A lerna sandbox, inspired by this essay on a [majestic monolith](https://m.signalvnoise.com/the-majestic-monolith/)
 
 ## Useful scripts (windows)
 
 The scripts here should be broken down by package, and for now are all written for developing on the Windows platform
 
 #### /packages/components
+
+Push new commits
+
+```sh
+$ git subtree push --prefix=packages/components components core
+```
 
 Build components in `~/src` to `~/dist`
 
