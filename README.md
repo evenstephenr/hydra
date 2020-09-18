@@ -4,9 +4,9 @@ A playground for lerna and sandbox for learning how to responsibly use a [majest
 
 ## Useful scripts (windows)
 
-> broken down by package
+The scripts here should be broken down by package, and for now are all written for developing on the Windows platform
 
-### /packages/components
+#### /packages/components
 
 Build components in `~/src` to `~/dist`
 
