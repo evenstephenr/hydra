@@ -1,27 +1,22 @@
-import React, {
-  useEffect,
-} from 'react';
-import PropTypes from 'prop-types';
-import {
-  Button as ComponentButton,
-  sayHello,
-} from 'components';
-import './button.css';
+import React from "react";
+import PropTypes from "prop-types";
+import { Button as ComponentButton } from "components";
+import "./button.css";
 
 /**
  * Primary UI component for user interaction
  */
 export const Button = ({ primary, backgroundColor, size, label, ...props }) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-
-  useEffect(() => {
-    sayHello('hello!')
-  }, [])
+  const mode = primary
+    ? "storybook-button--primary"
+    : "storybook-button--secondary";
 
   return (
     <ComponentButton
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={["storybook-button", `storybook-button--${size}`, mode].join(
+        " "
+      )}
       style={backgroundColor && { backgroundColor }}
       {...props}
     >
@@ -42,7 +37,7 @@ Button.propTypes = {
   /**
    * How large should the button be?
    */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  size: PropTypes.oneOf(["small", "medium", "large"]),
   /**
    * Button contents
    */
@@ -56,6 +51,6 @@ Button.propTypes = {
 Button.defaultProps = {
   backgroundColor: null,
   primary: false,
-  size: 'medium',
-  onClick: () => alert('hello again!'),
+  size: "medium",
+  onClick: () => alert("hello again!"),
 };
