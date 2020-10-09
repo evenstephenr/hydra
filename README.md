@@ -6,6 +6,18 @@ A lerna sandbox, inspired by this essay on a [majestic monolith](https://m.signa
 
 The scripts here should be broken down by package, and for now are all written for developing on the Windows platform
 
+Add a remote to a new package
+
+```sh
+git remote add {PACKAGE_NAME} git@github.com:{GIT_USERNAME}/{REPOSITORY_NAME}.git
+```
+
+Push commits to a package
+
+```sh
+$ git subtree push --prefix=packages/{PACKAGE_NAME} {PACKAGE_NAME} {BRANCH}
+```
+
 #### /packages/components
 
 Push new commits
