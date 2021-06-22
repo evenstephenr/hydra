@@ -1,6 +1,27 @@
 # Hydra
 
-A lerna sandbox, inspired by this essay on a [majestic monolith](https://m.signalvnoise.com/the-majestic-monolith/)
+A [lerna](https://github.com/lerna/lerna) sandbox, inspired by this essay on a [majestic monolith](https://m.signalvnoise.com/the-majestic-monolith/)
+
+## Install
+
+1. Clone this repository
+
+```
+$ git clone git@github.com:evenstephenr/hydra.git
+```
+
+2. Run lerna bootstrap (shown using npx)
+
+```
+$ npx lerna bootstrap
+lerna notice cli v3.22.1
+lerna info versioning independent
+lerna info Bootstrapping 3 packages
+lerna info Installing external dependencies
+lerna info Symlinking packages and binaries
+lerna success Bootstrapped 3 packages
+```
+
 
 ## Useful scripts (windows)
 
