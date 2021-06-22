@@ -2,7 +2,7 @@
 
 A [lerna](https://github.com/lerna/lerna) sandbox, inspired by this essay on a [majestic monolith](https://m.signalvnoise.com/the-majestic-monolith/)
 
-## Install
+## Initial setup
 
 1. Clone this repository
 
@@ -10,16 +10,10 @@ A [lerna](https://github.com/lerna/lerna) sandbox, inspired by this essay on a [
 $ git clone git@github.com:evenstephenr/hydra.git
 ```
 
-2. Run lerna bootstrap (shown using npx)
+2. Run the bootstrap scripts
 
 ```
-$ npx lerna bootstrap
-lerna notice cli v3.22.1
-lerna info versioning independent
-lerna info Bootstrapping 3 packages
-lerna info Installing external dependencies
-lerna info Symlinking packages and binaries
-lerna success Bootstrapped 3 packages
+$ npm run bootstrap
 ```
 
 
@@ -30,7 +24,8 @@ The scripts here should be broken down by package, and for now are all written f
 Add a remote to a new package
 
 ```sh
-git remote add {PACKAGE_NAME} git@github.com:{GIT_USERNAME}/{REPOSITORY_NAME}.git
+$ git remote add {PACKAGE_NAME} git@github.com:{GIT_USERNAME}/{REPOSITORY_NAME}.git
+$ git subtree add —-prefix={PACKAGE_DIR} {PACKAGE_NAME} core
 ```
 
 Push commits to a package
